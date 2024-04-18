@@ -9,7 +9,12 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    '@formkit/auto-animate/nuxt',
+    'nuxt-quasar-ui',
+    'nuxt-icon'
   ],
+
+  quasar: {},
 
   experimental: {
     // when using generate, payload js assets included in sw precache manifest

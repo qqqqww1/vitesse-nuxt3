@@ -4,12 +4,20 @@ import { appName } from '~/constants'
 useHead({
   title: appName,
 })
+const quasar = useQuasar()
+
+const isDark = useDark()
+watchImmediate(isDark, (isDark) => {
+  quasar.dark.set(isDark)
+})
 </script>
 
 <template>
   <VitePwaManifest />
   <NuxtLayout>
-    <NuxtPage />
+    <q-layout view="hHr LpR lFf">
+      <NuxtPage />
+    </q-layout>
   </NuxtLayout>
 </template>
 
